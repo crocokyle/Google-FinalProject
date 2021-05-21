@@ -4,11 +4,11 @@ import os
 import requests
 
 txt_path = "supplier-data/descriptions"
-url = "http://localhost/fruits"
+url = "http://34.123.34.240/fruits/"
 
 
 for txt in os.listdir(txt_path):
-  if txt[-4:] = ".txt":
+  if txt[-4:] == ".txt":
     line_list = []
     dictionary = {}
     with open(os.path.join(txt_path, txt), 'r') as file:
