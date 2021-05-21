@@ -17,13 +17,12 @@ def email_status(subject):
 def main():
   cpu_usage = psutil.cpu_percent(1)
   cpu_status = cpu_usage > 80
-  print(cpu_status)
 
   disk_usage = shutil.disk_usage("/").used / shutil.disk_usage("/").total * 100
   disk_status = disk_usage < 20
 
   memory_usage = psutil.virtual_memory().available / 1024**2
-  memory_status = memory_usage < 500
+  memory_status = memory_usage > 500
 
   network_status = socket.gethostbyname('localhost') != "127.0.0.1"
 
@@ -35,7 +34,7 @@ def main():
     print("Error - Available disk space is less than 20%")
     email_status("Error - Available disk space is less than 20%")
 
-  if memory_usage:
+  if not memory_usage:
     print("Error - Available memory is less than 500MB")
     email_status("Error - Available memory is less than 500MB")
 
