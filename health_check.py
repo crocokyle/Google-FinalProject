@@ -9,7 +9,7 @@ import os
 
 def email_status(subject):
   sender = "automation@example.com"
-  receiver = "{}@example.com".format(os.environ["USER"])
+  receiver = "student-02-35d77fd57627@example.com"
   body = "Please check your system and resolve the issue as soon as possible."
   message = emails.generate_email(sender, receiver, subject, body, False)
   emails.send_email(message)
