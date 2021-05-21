@@ -21,7 +21,7 @@ def generate_email(sender, recipient, subject, body, attachment_path):
 
   return message
 
-def send(message):
+def send_email(message):
 
   mail_server = smtplib.SMTP('localhost')
   mail_server.send_message(message)
