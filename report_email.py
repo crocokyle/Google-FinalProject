@@ -17,6 +17,7 @@ def parseData():
         item_collector.append("name: {}weight: {}\n".format(content[0], content[1]))
 
   print("".join(item_collector))
+  reports.generate_report(report_path, report_title, "".join(item_collector))
 
 if __name__ == "__main__":
   parseData()
