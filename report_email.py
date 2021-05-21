@@ -16,7 +16,7 @@ def parseData():
         content = f.readlines()
         item_collector.append("name: {}weight: {}\n".format(content[0], content[1]))
 
-  print(item_collector)
+  print("".join(item_collector))
 
 if __name__ == "__main__":
   parseData()
