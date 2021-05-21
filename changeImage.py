@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 import os
-import tqdm
+from tqdm import tqdm
 from PIL import Image
 
-image_path = "~/supplier-data/images"
+image_path = "supplier-data/images"
 
 for pic in tqdm(os.listdir(image_path)):
    f_name = pic[:-4] + ".jpg"
