@@ -14,7 +14,7 @@ def parseData():
     if file[-4:] == ".txt":
       with open(os.path.join(desc_dir, file), 'r') as f:
         content = f.readlines()
-        item_collector.append("name: {}weight: {}\n".format(content[0], content[1]))
+        item_collector.append("name: {}\nweight: {}\n\n".format(content[0], content[1]))
 
   print("".join(item_collector))
   reports.generate_report(report_path, report_title, "".join(item_collector))
