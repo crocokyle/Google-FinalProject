@@ -8,7 +8,7 @@ image_path = "supplier-data/images"
 for pic in os.listdir(image_path):
   if pic[-4:] == "jpeg":
     with open(os.path.join(image_path, pic), 'rb') as file:
-      r = requests.psot(url, files={'file': file})
+      r = requests.post(url, files={'file': file})
       if not r.ok:
         print(r.status)
         print(r.text)
