@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
   sender = "automation@example.com"
   recipient = "student-02-35d77fd57627@example.com"
-  subject = "Upload Comppleted - Online Fruit Store"
+  subject = "Upload Completed - Online Fruit Store"
   body = "All fruits are uploaded to our website successfully. A detailed list is attached to this email."
   message = emails.generate_email(sender, recipient, subject, body, report_path)
 
