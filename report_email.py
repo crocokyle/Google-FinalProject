@@ -13,9 +13,5 @@ def __main__():
   for file in os.listdir(desc_dir):
     if file[-4:] == ".txt":
       with open(os.path.join(desc_dir, file), 'r') as f:
-        line_collector = []
-        for line in f.readlines():
-          line_collector.append(line[:-1])
-        item_collector['name'] = line_collector[0]
-        item_collector['weight'] = line_collector[1]
-        
+        content = f.readlines()
+        item_collector.append("name: {}\nweight: {}\n\n".format(content[0], content[1]))
