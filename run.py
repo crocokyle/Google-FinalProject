@@ -18,6 +18,7 @@ for txt in os.listdir(txt_path):
       dictionary['name'] = line_list[0]
       dictionary['weight'] = int(line_list[1][:-4])
       dictionary['description'] = line_list[2]
+      dictionary['image_name'] = txt[:-4] + ".jpeg"
 
     print(dictionary)
     x = requests.post(url, json=dictionary)
