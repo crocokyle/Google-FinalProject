@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
   report_path = "/tmp/processed.pdf"
   report_title = "Processed on {}".format(datetime.date.today())
-  report_data = parseData()
+  data = parseData()
 
   reports.generate_report(report_path, report_title, data)
 
