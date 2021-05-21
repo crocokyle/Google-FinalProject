@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import email.message
 import mimetypes
@@ -21,4 +21,8 @@ def generate_email(sender, recipient, subject, body, attachment_path):
 
   return message
 
-def send(message)
+def send(message):
+
+  mail_server = smtplib.SMTP('localhost')
+  mail_server.send_message(message)
+  mail_server.quit()
