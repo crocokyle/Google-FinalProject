@@ -4,7 +4,7 @@ import os
 import requests
 
 txt_path = "supplier-data/descriptions"
-url = "http://34.123.34.240/fruits/"
+url = "http://localhost/fruits/"
 
 
 for txt in os.listdir(txt_path):
